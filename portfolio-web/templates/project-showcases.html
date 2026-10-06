@@ -1,0 +1,18 @@
+{% for project in projects %}
+<article class="project-card showcase reveal" id="project-{{ project.id }}">
+  <div class="project-art art-{{ project.art }}" aria-hidden="true">
+    <span class="art-number">{{ project.number }}</span>
+    {% if project.art == 'pipeline' %}
+    <div class="exhibit pipeline-exhibit"><span class="exhibit-label">AZURE PIPELINES / MAIN</span><div class="deploy-node">⑂<small>COMMIT</small></div><div class="signal-line"></div><div class="deploy-stages"><span>TEST ✓</span><span>BUILD ✓</span><span>DEPLOY ↗</span></div><p>CODE → CONTAINER → CLOUD</p></div>
+    {% elif project.art == 'agent' %}
+    <div class="exhibit agent-exhibit"><div class="agent-halo"></div><div class="agent-core">c<span>_</span></div><div class="voice-bars">{% for i in range(17) %}<i style="--i:{{ i }}"></i>{% endfor %}</div><div class="agent-flow"><span>DRAFT</span><span>CONFIRM</span><span>SEND</span></div></div>
+    {% elif project.art == 'laptop' %}
+    <div class="exhibit laptop-exhibit"><div class="laptop-screen"><span>LOQ</span><small>FRAME BY FRAME.</small><div class="screen-grid"></div></div><div class="laptop-base"></div><div class="frame-track"><span>001</span><i></i><span>240</span></div></div>
+    {% else %}
+    <div class="exhibit store-exhibit"><div class="store-window"><div class="store-bar">THE STOREFRONT <span>◫</span></div><div class="store-products"><i>▱</i><i>◈</i><i>◯</i></div><div class="store-checkout">CART → CHECKOUT <span>↗</span></div></div><div class="store-services"><span>MONGODB</span><span>REDIS</span><span>STRIPE</span></div></div>
+    {% endif %}
+    <span class="art-caption">{{ project.headline }} / CONCEPT VISUAL</span>
+  </div>
+  <div class="project-body"><div class="project-index"><span>{{ project.number }} / {{ project.category }}</span><span class="tag">{{ project.status }}</span></div><h3>{{ project.title }}</h3><p>{{ project.body }}</p><div class="tags">{% for tag in project.tags %}<span>{{ tag }}</span>{% endfor %}</div><div class="showcase-actions"><button class="project-open inline-link" type="button" data-project="{{ project.id }}">Explore the build <span>↗</span></button><a class="repo-link" href="{{ project.repo }}" target="_blank" rel="noopener noreferrer" aria-label="{{ project.title }} GitHub repository">GitHub ↗</a></div></div>
+</article>
+{% endfor %}
