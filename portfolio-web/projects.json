@@ -1,0 +1,109 @@
+[
+  {
+    "id": "docker",
+    "number": "02",
+    "category": "CLOUD DELIVERY",
+    "title": "Dockerised Web App",
+    "headline": "From push to production.",
+    "status": "CI/CD pipeline",
+    "body": "A containerized Node.js/Express app with an Azure DevOps pipeline that tests the code, publishes versioned Docker Hub images, and triggers deployment on Render.",
+    "tags": [
+      "Docker",
+      "Azure DevOps",
+      "Node.js",
+      "Docker Hub",
+      "Render"
+    ],
+    "subtitle": "Delivery workflow",
+    "bullets": [
+      "The YAML pipeline runs automated tests before building and publishing the image.",
+      "A multi-stage Dockerfile uses a non-root runtime user and a /health check.",
+      "Build-ID and latest tags are pushed through a Docker Hub service connection.",
+      "A secret Render deploy-hook variable connects the final deployment stage."
+    ],
+    "repo": "https://github.com/Chirag-Deviputra/Dockerised-Web-App-Azure-Pipeline",
+    "art": "pipeline",
+    "kicker": "02 / CLOUD DELIVERY"
+  },
+  {
+    "id": "corrupter",
+    "number": "03",
+    "category": "AI & AUTOMATION",
+    "title": "Personal Agent · Corrupter",
+    "headline": "A local brain. A human in control.",
+    "status": "Working prototype",
+    "body": "A personal assistant pairing an Ollama language model with a FastAPI dashboard, browser voice input/output, SQLite conversation history, and a draft–confirm–send email workflow.",
+    "tags": [
+      "Python",
+      "FastAPI",
+      "Ollama",
+      "SQLite",
+      "Web Speech API"
+    ],
+    "subtitle": "What is implemented",
+    "bullets": [
+      "Local model chat through Ollama, with a browser-based dashboard and personality editor.",
+      "Browser speech recognition and synthesis provide voice input and output; voice is not fully offline.",
+      "SQLite stores conversations, statistics and pending actions.",
+      "Gmail email drafts require explicit confirmation before sending.",
+      "Twilio calls, offline speech and retrieval-based long-term memory are future work."
+    ],
+    "repo": "https://github.com/Chirag-Deviputra/Personal-Agent-Corrupter",
+    "art": "agent",
+    "kicker": "03 / AI & AUTOMATION"
+  },
+  {
+    "id": "lenovo",
+    "number": "04",
+    "category": "CREATIVE FRONTEND",
+    "title": "Lenovo LOQ Experience",
+    "headline": "Performance, frame by frame.",
+    "status": "Unofficial concept",
+    "body": "A cinematic product showcase built with Next.js and TypeScript. A scroll-linked canvas sequences 240 frames while animated overlays introduce the laptop, performance, and thermal story.",
+    "tags": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Framer Motion",
+      "Tailwind CSS"
+    ],
+    "subtitle": "Interaction design",
+    "bullets": [
+      "A sticky canvas sequences 240 frames across a 600vh scrolling section.",
+      "Framer Motion maps scroll progress to overlay opacity, position and scale.",
+      "Product specification cards complete the experience after the sequence.",
+      "An independent frontend concept, not an official Lenovo website or purchasing flow."
+    ],
+    "repo": "https://github.com/Chirag-Deviputra/Lenovo-LOQ-Frontend-Web-Project",
+    "art": "laptop",
+    "kicker": "04 / CREATIVE FRONTEND"
+  },
+  {
+    "id": "ecommerce",
+    "number": "05",
+    "category": "CONTAINERS & FULL STACK",
+    "title": "Docker E-Commerce",
+    "headline": "Storefront to service.",
+    "status": "Learning project",
+    "body": "A course-based e-commerce application exploring authentication, products, carts, coupons, Stripe checkout, and an admin dashboard, with a Dockerized Node.js backend.",
+    "tags": [
+      "Docker",
+      "Express",
+      "MongoDB",
+      "Redis",
+      "Stripe",
+      "Tailwind CSS"
+    ],
+    "subtitle": "Application & container work",
+    "bullets": [
+      "The application includes JWT access/refresh authentication, product and category management, cart and coupon flows.",
+      "MongoDB stores application data; Redis supports caching and token-related workflows.",
+      "Stripe integration supports checkout, with Cloudinary used for media.",
+      "The backend Dockerfile uses Node 24, installs production dependencies and runs as the node user.",
+      "The repository credits a course tutorial; presented here as a learning and containerization project."
+    ],
+    "repo": "https://github.com/Chirag-Deviputra/docker-ecommerce-project",
+    "art": "store",
+    "kicker": "05 / CONTAINERS & FULL STACK"
+  }
+]
